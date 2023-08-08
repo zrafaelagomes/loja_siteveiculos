@@ -42,14 +42,21 @@ $(document).ready(function() {
         }
     })
 
-    $('.lista-veiculos button').click(function() {
-        const destino = $('#contato'); 
-        const nomeVeiculo = $(this).parent().find('h3').text();
+    $('.btn-interest').click(function() {
 
-        $('#veiculo-interesse').val(nomeVeiculo);
-
-        $('html').animate({
-            scrollTop: destino.offset().top
-        }, 1000)
-    })
+        const nomeVeiculo = $(this).siblings('h3').text();
+        
+        $('#veiculoDeInteresse').val(nomeVeiculo);
+        
+        
+        
+        const destino = $('#contato');
+        
+        $('html, body').animate({
+        
+        scrollTop: destino.offset().top
+        
+        }, 1000);
+        
+        });
 })
